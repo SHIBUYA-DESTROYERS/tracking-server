@@ -77,8 +77,8 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'tracking',
-        'USER': 'root',
-        'PASSWORD': 'root',
+        'USER': 'tracking',
+        'PASSWORD': 'tracking',
         'HOST': 'mysql',
         'PORT': 3306,
     }

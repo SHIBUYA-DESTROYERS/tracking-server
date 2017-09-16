@@ -5,10 +5,10 @@ services:
     image: mysql:5.7
     restart: always
     environment:
-      - MYSQL_DATABASE=hoge
+      - MYSQL_DATABASE=tracking
       - MYSQL_ROOT_PASSWORD=root
-      - MYSQL_USER=hoge
-      - MYSQL_PASSWORD=hoge
+      - MYSQL_USER=tracking
+      - MYSQL_PASSWORD=tracking
     ports:
       - "3306:3306"
   web:
