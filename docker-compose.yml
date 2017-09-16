@@ -1,8 +1,16 @@
 version: '3'
 
 services:
-  db:
-    image: postgres
+  mysql:
+    image: mysql:5.7
+    restart: always
+    environment:
+      - MYSQL_DATABASE=hoge
+      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_USER=hoge
+      - MYSQL_PASSWORD=hoge
+    ports:
+      - "3306:3306"
   web:
     build: .
     command: python3 manage.py runserver 0.0.0.0:8000
@@ -11,4 +19,6 @@ services:
     ports:
       - "8000:8000"
     depends_on:
-      - db
+      - mysql
+    links:
+      - mysql
